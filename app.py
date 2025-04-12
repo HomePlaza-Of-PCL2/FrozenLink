@@ -28,49 +28,64 @@ HOMEPAGE = '''
             </EventTrigger>
         </Style.Triggers>
     </Style>
+    <sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
 </StackPanel.Resources>
  
 <local:MyCard Margin="0,0,0,0">
-    <TextBlock Text="%(ServerName)s"
-        HorizontalAlignment="Left" 
-        FontSize="20" 
-        FontFamily="Microsoft Yahei Ui"
-        Margin="12,12,12,12"
-        FontWeight="Bold"/>
-    <TextBlock Text="使用 iceLink 主页 v0.1.5 版本创建"
-        HorizontalAlignment="Left" 
-        FontSize="16" 
-        Margin="80,14,12,12"/>
-    <TextBlock Text="给 iceLink 点个 star 吧~"
-        Foreground="{DynamicResource ColorBrush2}"
-        HorizontalAlignment="Right" 
-        FontSize="16" 
-        Margin="12,12,50,12"/>
-    <local:MyIconButton 
-        Margin="0,10,15,10" 
-        Width="15" 
-        Height="15" 
-        HorizontalAlignment="Right" 
-        ToolTip="刷新" 
-        EventType="刷新主页">
-        <Path 
-            Stretch="Uniform"
-            Width="15" 
-            Height="15" 
-            Style="{StaticResource AnimatedPathStyle}"
-            Data="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"             
-            Fill="{StaticResource IconBrush}"/>
-    </local:MyIconButton>
+    <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
+        <StackPanel>
+            <TextBlock Text="%(ServerName)s"
+                HorizontalAlignment="Left" 
+                FontSize="20" 
+                FontFamily="Microsoft Yahei Ui"
+                Margin="16,12,12,0"
+                FontWeight="Bold"/>
+            <TextBlock Text="使用 iceLink 主页 v0.1.5 版本创建"
+                HorizontalAlignment="Left" 
+                FontSize="16" 
+                Margin="16,12,12,12"/>
+            <TextBlock Text="给 iceLink 点个 star 吧~"
+                Foreground="{DynamicResource ColorBrush2}"
+                HorizontalAlignment="Right" 
+                FontSize="16" 
+                Margin="12,-30,50,12"/>
+            <local:MyIconButton 
+                Margin="0,-32,15,10" 
+                Width="15" 
+                Height="15" 
+                HorizontalAlignment="Right" 
+                ToolTip="刷新" 
+                EventType="刷新主页">
+                <Path 
+                    Stretch="Uniform"
+                    Width="15" 
+                    Height="15" 
+                    Style="{StaticResource AnimatedPathStyle}"
+                    Data="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"             
+                    Fill="{StaticResource IconBrush}"/>
+            </local:MyIconButton>
+        </StackPanel>
+    </Border>
 </local:MyCard>
 
 
 
-<local:MyCard Title="MC服务器信息" Margin="0,64,0,15">
+<local:MyCard Title="" Margin="0,64,0,15">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
         <StackPanel Grid.Column="0">
             <TextBlock 
@@ -79,7 +94,11 @@ HOMEPAGE = '''
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Margin="18,30,0,15"/>  
+                Margin="18,16,0,15"
+                Grid.Column="0"
+                Grid.Row="0"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,20,0,0"> 
             <TextBlock 
                 Text="服务器版本：%(ProtocolName)s"
                 FontSize="18"
@@ -96,23 +115,27 @@ HOMEPAGE = '''
                 Margin="18,0,15,15"/>
         </StackPanel>
         
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0,22,15,0">
-            <local:MyButton 
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,12,12,0">
+            <local:MyIconTextButton
                 Text="加入服务器" 
                 Margin="0,0,15,8" 
                 EventType="启动游戏" 
                 EventData="\current|%(ServerIP)s" 
                 ToolTip="将会以当前版本加入 %(ServerIP)s" 
-                Height="35" 
-                Width="80"/>
-            <local:MyButton 
-                Text="复制地址" 
-                Margin="0,8,15,0" 
+                LogoScale="0.9"
+                Logo="{StaticResource LaunchIcon}"
+                Height="32"
+                Width="120"/>
+            <local:MyIconTextButton
+                Text="点击复制地址"
+                Margin="0,0,15,0"
                 EventType="复制文本" 
                 EventData="%(ServerIP)s" 
-                ToolTip="复制服务器地址" 
-                Height="35" 
-                Width="80"/>
+                ToolTip="复制服务器地址"
+                LogoScale="0.9"
+                Logo="M4 2H2v12h2V4h10V2zm2 4h12v2H8v10H6zm4 4h12v12H10zm10 10v-8h-8v8z"
+                Height="32"
+                Width="120"/>
         </StackPanel>
     </Grid>
 </local:MyCard>
