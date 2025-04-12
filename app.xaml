@@ -178,7 +178,7 @@
                     Foreground="#666666"
                     FontWeight="Bold"/>
                 <TextBlock 
-                    Text="11% 98%"
+                    Text="62% 98%"
                     FontSize="30"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
