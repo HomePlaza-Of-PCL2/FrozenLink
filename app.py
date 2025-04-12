@@ -40,17 +40,17 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 <local:MyCard Margin="0,0,0,0">
     <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
         <StackPanel>
-            <TextBlock Text="%(ServerName)s"
+            <TextBlock Text="%(ServerName)s 服务器面板"
                 HorizontalAlignment="Left" 
                 FontSize="20" 
                 FontFamily="Microsoft Yahei Ui"
                 Margin="16,12,12,0"
                 FontWeight="Bold"/>
-            <TextBlock Text="使用 iceLink 主页 v0.1.5 版本创建"
+            <TextBlock Text="使用 FrozenLink v0.1.5 版本创建"
                 HorizontalAlignment="Left" 
                 FontSize="16" 
                 Margin="16,12,12,12"/>
-            <TextBlock Text="给 iceLink 点个 star 吧~"
+            <TextBlock Text="请给 FrozenLink 点个 star"
                 Foreground="{DynamicResource ColorBrush2}"
                 HorizontalAlignment="Right" 
                 FontSize="16" 
@@ -87,9 +87,8 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <StackPanel Grid.Column="0">
             <TextBlock 
-                Text="%(ServerName)s"
+                Text="%(ServerName)s 服务器信息"
                 FontSize="18"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
