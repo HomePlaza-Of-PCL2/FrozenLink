@@ -3,6 +3,7 @@
 ***该项目为 PCL2 服务器监测面板，服务群体：服主以及服务器管理员。***
 #### 预览图
 
+![image](https://github.com/user-attachments/assets/e67cc580-08a9-4b9e-963a-7fa4363aeef9)
 
 ------
 
