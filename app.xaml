@@ -438,7 +438,7 @@
                     Foreground="#666666"
                     FontWeight="Bold"/>
                 <TextBlock 
-                    Text="12% 95%"
+                    Text="13% 95%"
                     FontSize="30"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
@@ -459,7 +459,7 @@
                     Foreground="#666666"
                     FontWeight="Bold"/>
                 <TextBlock 
-                    Text="0 : 5"
+                    Text="0 : 7"
                     FontSize="30"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
