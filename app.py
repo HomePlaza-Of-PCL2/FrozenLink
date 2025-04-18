@@ -4,8 +4,32 @@ import requests
 import json
 from math import floor
 
-with open('config.json', "r+", encoding='utf-8') as f:
-    config = json.load(f)
+try:
+    with open('config.json', "r+", encoding='utf-8') as f:
+        config = json.load(f)
+except FileNotFoundError:
+    print("未检测到配置文件，已自动生成配置文件。")
+    with open('config.json', "w+", encoding="utf-8") as f:
+        config = {
+            "ip": "http://YOUR_PANEL_IP",
+            "apikey": "YOUR_API_KEY",
+            "setToken": "YOUR_TOKEN",
+            "server_port": "SERVER_PORT",
+            "debug": True,
+            "serverConfig": {
+                "serverName": "YOUR_SERVER_NAME",
+                "serverIP": "YOUR_SERVER_IP",
+                "serverPORT": "25565"
+            },
+            "bulletinConfig": {
+                "bulletinEnabled": False,
+                "bulletinTitle": "BULLETIN_TITLE",
+                "bulletinContents": [
+                    "THE_FIRST_SENTENCE",
+                    "THE_SECOND_SENTENCE"
+                ]
+            }
+        }
 
 HOMEPAGE = '''<StackPanel.Resources>
     <Style TargetType="ListItem">
