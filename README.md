@@ -71,7 +71,7 @@ https://github.com/icelly-QAQ/PCL2-HomePage_iceLink
 ### 声明
 
 
-该项目使用 CC BY-NC-SA 4.0 协议
+该项目使用 [MIT 协议](https://lbesson.mit-license.org) 授权
 
 
 项目灵感提供者以及`iceLink`冰点链接作者：[icelly_QAQ](https://github.com/icelly-QAQ)   
