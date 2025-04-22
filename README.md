@@ -6,7 +6,7 @@
 
 ***该项目为 PCL2 服务器监测面板，服务群体：服主以及服务器管理员。***  
 ***灵感源于 iceLink ，但其余全部为自己制作***  
-***语言：Python  /  仓库地址：[https://github.com/CreeperIsASpy/FrozenLink](https://github.com/HomePlaza-Of-PCL2/FrozenLink)***
+***语言：Python  /  仓库地址：https://github.com/HomePlaza-Of-PCL2/FrozenLink***
 ### 预览图
 
 ![image](assets/preview.png)
